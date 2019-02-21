@@ -4,18 +4,22 @@
 int main()
 
 {
-    int n;
+
     int x;
-    int fact;
 
     printf("\nMettez un nombre :");
     scanf("%i",&x);
 
-    for (n=x; n>0; n--)
-    {
-        ( n * (x-1) );
-        x=n;
-    }
-     printf("\n %i", n);
+    factorial(x);
     return 0;
+}
+
+void factorial(int x)
+{
+    int resulat = 1;
+    for (int n=x; n>0; n--)
+    {
+        resulat= resulat*n;
+    }
+     printf("\n %i", resulat);
 }
