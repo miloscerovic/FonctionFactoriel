@@ -11,15 +11,21 @@ int main()
     scanf("%i",&x);
 
     factorial(x);
+    printf("\n %i! =%i", x, factorial(x));
     return 0;
 }
 
-void factorial(int x)
+int factorial(int x)
 {
     int resulat = 1;
-    for (int n=x; n>0; n--)
+
+    if(x==1)
     {
-        resulat= resulat*n;
+        return 1;
     }
-     printf("\n %i", resulat);
+    return (x*factorial((x-1)));
+
+
+
+
 }
